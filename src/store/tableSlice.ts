@@ -82,6 +82,8 @@ const tableSlice = createSlice({
         filtered.sort((a, b) => {
           const aValue = a[state.sortField!];
           const bValue = b[state.sortField!];
+
+          // console.log(`Sorting by ${aValue} in ${bValue} order`);
           
           if (typeof aValue === 'string' && typeof bValue === 'string') {
             const comparison = aValue.localeCompare(bValue);
